@@ -5,20 +5,17 @@ RUN patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst \
     && curl -LO "https://raw.githubusercontent.com/sickcodes/Docker-OSX/master/${patched_glibc}" \
     && bsdtar -C / -xvf "${patched_glibc}" || echo "Everything is fine." \
 # TEMP-FIX for pacman issue
-
     pacman -Syyu --noconfirm --noprogressbar && \
     pacman -S --noconfirm --needed --noprogressbar \
     base-devel \
     git \
     htop \
     wget \
-
 # TEMP-FIX for pacman issue
 RUN patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst \
     && curl -LO "https://raw.githubusercontent.com/sickcodes/Docker-OSX/master/${patched_glibc}" \
     && bsdtar -C / -xvf "${patched_glibc}" || echo "Everything is fine." \
 # TEMP-FIX for pacman issue
-
 &&echo "root:root" | chpasswd \
 && groupadd --system sudo \
 && useradd -m --groups sudo user \
