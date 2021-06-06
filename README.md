@@ -3,4 +3,4 @@
 
 * Build the image with `docker build -t creator54/arch-latest .`
 * Get ID/NAME `docker images`
-* now run with `docker run -it <ID>/<NAME> bash`
+* now run with `docker exec -it <ID>/<NAME> bash`
