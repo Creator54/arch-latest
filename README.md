@@ -2,8 +2,8 @@
 ## Usage:
 
 * Build the image with `docker build -t creator54/arch-latest .`
-* Get ID/NAME `docker images`
-* now run with `docker exec -it <ID>/<NAME> bash`
+* Get it running `docker run -d -t --name <giveaname> creator54/arch-latest`
+* now run with `docker exec -it <giveaname> bash`
 
 ## Note:
 * PASSWORD for `root` is `root`
